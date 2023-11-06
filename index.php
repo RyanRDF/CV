@@ -17,5 +17,5 @@ $result = mysqli_query($conn, "SELECT * FROM cv_data");
   <title>Curiculum Vitae</title>
 </head>
 <body>
-
 </body>
+</html>
