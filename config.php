@@ -1,10 +1,12 @@
 <?php
 $host = 'localhost';
-$db = 'CV';
+$db = 'cv';
+$user = 'CV';
+$pwd = '1234';
 
-$conn = mysqli_connect($host, $db); // true | false
+$conn = mysqli_connect($host, $user, $pwd, $db); // true | false
 
 if (!$conn) {
-    die('Gagal terhubung ke database'. mysqli_connect_error());
-  }
-  
+  die('Gagal terhubung ke database'. mysqli_connect_error());
+}
+?>
