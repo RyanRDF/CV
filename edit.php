@@ -101,6 +101,7 @@ $data = getCVData();
         </div>
       </div>
     </div> -->
+    <form method="post">
     <table class="table table-hover">
   <thead>
     <tr>
@@ -111,26 +112,41 @@ $data = getCVData();
   <tbody>
     <tr>
       <td>Nama</td>
-      <td><input class="form-control" id="nama" type="text" name="nama" value="<?php echo $data['nama']; ?>" placeholder="Nama" required></td>
+      <td>
+        <input class="form-control" id="nama" type="text" name="nama" value="<?php echo $data['nama']; ?>" placeholder="Nama" required></td>
     </tr>
     <tr>
       <td>Pendidikan</td>
-      <td><textarea class="form-control" id="pendidikan" name="pendidikan" rows="3" placeholder="Pendidikan" required><?php echo $data['pendidikan']; ?></textarea></td>
+      <td>
+        <textarea class="form-control" id="pendidikan" name="pendidikan" rows="3" placeholder="Pendidikan" required><?php echo $data['pendidikan']; ?></textarea></td>
     </tr>
     <tr>
       <td>Keterampilan</td>
-      <td><?php echo $data['keterampilan'];?></td>
+      <td>
+        <textarea class="form-control" id="keterampilan" name="keterampilan" rows="3" placeholder="Keterampilan" required><?php echo $data['keterampilan']; ?></textarea></td>
     </tr>
     <tr>
       <td>Pengalaman</td>
-      <td><?php echo $data['pengalaman_kerja'];?></td>
+      <td>
+        <textarea class="form-control" id="pengalamanKerja" name="pengalaman_kerja" rows="3" placeholder="Pengalaman Kerja" required><?php echo $data['pengalaman_kerja']; ?></textarea></td>
     </tr>
     <tr>
-      <td>Kontak</td>
-      <td>HP  : <?php echo $data['telepon'];?> Email  : <?php echo $data['email'];?></td>
+      <td>HP</td>
+      <td>
+        <input class="form-control" id="telepon" type="text" name="telepon" value="<?php echo $data['telepon']; ?>" placeholder="Telepon" required>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+        <input class="form-control" id="email" type="email" name="email" value="<?php echo $data['email']; ?>" placeholder="Email" required>
+    </td>
     </tr>
   </tbody>
 </table>
+<button type="submit" class="btn btn-success">
+                <a href="index.php">Simpan Perubahan</a>
+            </button>
+            </form>
   <!-- </div> -->
 </body>
 
