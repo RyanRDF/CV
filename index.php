@@ -32,13 +32,15 @@ $data = mysqli_fetch_array($result);
   </div>
 </nav>
 <!-- Body -->
-<div class="card">
+ <!-- <div class="card">
   <div class="card-body" class="fs-4">
   <div class="card" style="width: 18rem;">
   <img src="<?php $data['foto_path']?>"" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">My Picture</p>
-  </div>
+  </div> -->
+  <img class="img-responsive" src="<?php $data['foto_path']?>" alt="Chania">
+  <!--
 </div>
     <h1 class="fs-3"><?php echo $data['nama'];?></h1>
     <p class="fs-4"><?php echo $data['pendidikan'];?></p>
@@ -48,6 +50,36 @@ $data = mysqli_fetch_array($result);
     <p class="fs-4">Kontak</p>
     <p class="fs-4">Hp : <?php echo $data['telepon'];?> Email : <?php echo $data['email'];?></p>
   </div>
-</div>
+</div> -->
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nama</td>
+      <td><?php echo $data['nama'];?></td>
+    </tr>
+    <tr>
+      <td>Pendidikan</td>
+      <td><?php echo $data['pendidikan'];?></td>
+    </tr>
+    <tr>
+      <td>Keterampilan</td>
+      <td><?php echo $data['keterampilan'];?></td>
+    </tr>
+    <tr>
+      <td>Pengalaman</td>
+      <td><?php echo $data['pengalaman_kerja'];?></td>
+    </tr>
+    <tr>
+      <td>Kontak</td>
+      <td>HP  : <?php echo $data['telepon'];?> Email  : <?php echo $data['email'];?></td>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
