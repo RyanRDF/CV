@@ -70,7 +70,7 @@ $data = getCVData();
         <a class="navbar-brand" href="/cv">View</a>
       </div>
     </nav>
-    <div class="card-text-center" style="width: 18rem;">
+    <!-- <div class="card-text-center" style="width: 18rem;">
       <div class="alert alert-success">
         <div>
         <div class="card-body">
@@ -100,7 +100,37 @@ $data = getCVData();
         </div>
         </div>
       </div>
-    </div>
+    </div> -->
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nama</td>
+      <td><input class="form-control" id="nama" type="text" name="nama" value="<?php echo $data['nama']; ?>" placeholder="Nama" required></td>
+    </tr>
+    <tr>
+      <td>Pendidikan</td>
+      <td><textarea class="form-control" id="pendidikan" name="pendidikan" rows="3" placeholder="Pendidikan" required><?php echo $data['pendidikan']; ?></textarea></td>
+    </tr>
+    <tr>
+      <td>Keterampilan</td>
+      <td><?php echo $data['keterampilan'];?></td>
+    </tr>
+    <tr>
+      <td>Pengalaman</td>
+      <td><?php echo $data['pengalaman_kerja'];?></td>
+    </tr>
+    <tr>
+      <td>Kontak</td>
+      <td>HP  : <?php echo $data['telepon'];?> Email  : <?php echo $data['email'];?></td>
+    </tr>
+  </tbody>
+</table>
   <!-- </div> -->
 </body>
 
